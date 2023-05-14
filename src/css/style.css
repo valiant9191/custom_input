@@ -1,0 +1,108 @@
+@import url(./variables.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#3c3b3f 0, #605C3C 100%);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto 50%;
+    background: linear-gradient(90deg, #4b2b2b 10%, #782929 65%, #a31717 100%);
+    border-radius: 3px;
+    padding: 1.5em;
+    gap: 1.2em;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 2px 2px 12px -2px var(--white);
+    -webkit-box-shadow: 2px 2px 12px -2px var(--white);
+    -moz-box-shadow: 2px 2px 12px -2px var(--white);
+}
+
+.form:hover {
+    background: linear-gradient(90deg, #4b2b2b 10%, #782929 65%, #a31717 100%);
+    border-radius: 6px;
+    padding: 2em;
+    transform: scale(1.05);
+}
+
+.form__group {
+    position: relative;
+    transition: ease-in-out 1s;
+}
+
+.form__group-label {
+    cursor: pointer;
+}
+
+.form__group-field {
+    min-width: 60px;
+    background-color: transparent;
+    color: var(--white);
+    line-height: 25px;
+    border: none;
+    border-bottom: 2px solid var(--grey);
+    cursor: pointer;
+    outline: none;
+    transition: 0.5s;
+}
+
+
+.form__group-field:focus {
+    border-width: 2px;
+    border-style: solid;
+    border-image:
+        linear-gradient(to right, var(--primary)40%, var(--secondary)100%);
+    border-image-slice: 0% 0% 100% 0;
+}
+
+.form__group-field:focus~.form__group-label {
+    top: -50%;
+    color: var(--primary);
+    transform: scale(0.7);
+}
+
+.form__group-label {
+    position: absolute;
+    color: var(--grey);
+    left: 0;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.form__group-submit {
+    display: flex;
+    width: fit-content;
+    background-image: linear-gradient(to right, var(--primary)100%, var(--secondary)100%);
+    border: 1px solid var(--secondary);
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.form__group-submit:hover {
+    transform: scale(1.1);
+    background-image: linear-gradient(to right, var(--primary)40%, var(--secondary)100%);
+    animation-duration: 1s;
+    animation-name: gradientFromRight;
+}
+
+/* CSS */
+/* input:required:valid:not(:placeholder-shown) {
+    border-width: 2px;
+    border-style: solid;
+    border-image:
+        linear-gradient(to right, var(--primary)40%, var(--secondary)100%);
+    border-image-slice: 0% 0% 100% 0;
+} */

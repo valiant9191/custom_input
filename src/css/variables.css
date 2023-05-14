@@ -1,0 +1,78 @@
+:root {
+    --primary: #11998e;
+    --secondary: #11994a;
+    --white: #ffffff;
+    --grey: #9b9b9b;
+    --error: crimson;
+}
+
+
+@keyframes gradientFromRight {
+    0% {
+        background-image: linear-gradient(to right, var(--primary)100%, var(--secondary)100%);
+    }
+
+    5% {
+        background-image: linear-gradient(to right, var(--primary)96%, var(--secondary)100%);
+    }
+
+    10% {
+        background-image: linear-gradient(to right, var(--primary)92%, var(--secondary)100%);
+    }
+
+    15% {
+        background-image: linear-gradient(to right, var(--primary)88%, var(--secondary)100%);
+    }
+
+    20% {
+        background-image: linear-gradient(to right, var(--primary)84%, var(--secondary)100%);
+    }
+
+    25% {
+        background-image: linear-gradient(to right, var(--primary)80%, var(--secondary)100%);
+    }
+
+    30% {
+        background-image: linear-gradient(to right, var(--primary)76%, var(--secondary)100%);
+    }
+
+    35% {
+        background-image: linear-gradient(to right, var(--primary)72%, var(--secondary)100%);
+    }
+
+    40% {
+        background-image: linear-gradient(to right, var(--primary)68%, var(--secondary)100%);
+    }
+
+    45% {
+        background-image: linear-gradient(to right, var(--primary)64%, var(--secondary)100%);
+    }
+
+    50% {
+        background-image: linear-gradient(to right, var(--primary)60%, var(--secondary)100%);
+    }
+
+    60% {
+        background-image: linear-gradient(to right, var(--primary)56%, var(--secondary)100%);
+    }
+
+    70% {
+        background-image: linear-gradient(to right, var(--primary)52%, var(--secondary)100%);
+    }
+
+    80% {
+        background-image: linear-gradient(to right, var(--primary)48%, var(--secondary)100%);
+    }
+
+    90% {
+        background-image: linear-gradient(to right, var(--primary)44%, var(--secondary)100%);
+    }
+
+    95% {
+        background-image: linear-gradient(to right, var(--primary)42%, var(--secondary)100%);
+    }
+
+    100% {
+        background-image: linear-gradient(to right, var(--primary)40%, var(--secondary)100%);
+    }
+}
