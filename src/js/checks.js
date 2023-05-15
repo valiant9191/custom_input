@@ -40,7 +40,7 @@ const Check = {
     if (!Utils.isEmpty(email)) {
       errorMessage(emailEl, 'Email cannot be blank.');
     } else if (!Utils.isEmailValid(email)) {
-      errorMessage(emailEl, 'Email is not valid.');
+      errorMessage(emailEl, 'Email is not valid. Example@test.om');
     } else {
       valid = true;
     }

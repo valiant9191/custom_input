@@ -39,6 +39,8 @@ body {
 .form__group {
     position: relative;
     transition: ease-in-out 1s;
+    font-size: larger;
+    text-align: center;
 }
 
 .form__group-label {
@@ -48,7 +50,7 @@ body {
 .form__group-field {
     min-width: 60px;
     background-color: transparent;
-    color: var(--white);
+    color: transparent;
     line-height: 25px;
     border: none;
     border-bottom: 2px solid var(--grey);
@@ -57,14 +59,18 @@ body {
     transition: 0.5s;
 }
 
+.form__group-field.active {
+    color: var(--white);
+}
+
 .form__group-field.active~.form__group-label {
     top: -50%;
     color: var(--primary);
     transform: scale(0.7);
 }
 
-
 .form__group-field:focus {
+    color: var(--white);
     border-width: 2px;
     border-style: solid;
     border-image:
@@ -84,6 +90,7 @@ body {
     left: 0;
     transition: 0.3s;
     pointer-events: none;
+    text-transform: capitalize;
 }
 
 .form__group-submit {

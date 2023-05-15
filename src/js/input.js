@@ -60,7 +60,7 @@ const Input = {
       },
       {
         type: 'password',
-        name: 'confirm_password',
+        name: 'confirm password',
         required: true,
       },
     ];
