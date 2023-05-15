@@ -2,7 +2,7 @@ import Input from './js/input.js';
 import validateDebounce from './js/validateDebounce.js';
 
 window.addEventListener('DOMContentLoaded', () => {
-    Input.init();
+  Input.init();
 });
 
-document.addEventListener('input', validateDebounce)
+document.addEventListener('input', validateDebounce);
