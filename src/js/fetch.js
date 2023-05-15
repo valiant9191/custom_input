@@ -1,4 +1,5 @@
 import validateForm from './validate.js';
+import successMessage from './successMessage.js';
 
 function fetchSubmit() {
   const form = document.getElementById('form');
@@ -10,7 +11,7 @@ function fetchSubmit() {
   if (!valid) {
     return;
   }
-
+  successMessage()
   fetch(url, {
     method: 'post',
     body: JSON.stringify(data),
