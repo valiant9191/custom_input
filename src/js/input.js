@@ -1,3 +1,5 @@
+import fetchSubmit from './fetch.js'
+
 const Input = {
     elements: {
         form: null,
@@ -5,17 +7,23 @@ const Input = {
     init() {
         // create form
         this.elements.form = document.createElement('form');
+        this.elements.form.id = ('form');
         this.elements.form.classList.add('form');
+        this.elements.form.setAttribute('novalidate', true);
 
         this.elements.form.appendChild(this.createInputs());
 
         // create submit button
         const submitButton = document.createElement('button');
         submitButton.classList = 'form__group-submit';
-        submitButton.setAttribute('type', 'submit');
+        submitButton.setAttribute('type', 'button');
         submitButton.innerHTML = 'Submit';
 
+
         this.elements.form.appendChild(submitButton);
+
+        // <== fetch ==> 
+        submitButton.addEventListener('click', fetchSubmit)
 
         // add to document
         document.body.appendChild(this.elements.form);
@@ -53,7 +61,7 @@ const Input = {
             },
             {
                 type: 'password',
-                name: 'repeat password',
+                name: 'confirm_password',
                 required: true,
             },
         ];
@@ -67,6 +75,8 @@ const Input = {
             // create input
             const inputElement = document.createElement('input');
             inputElement.classList = 'form__group-field';
+            inputElement.id = input.name.replaceAll(' ', '_')
+
             // for each inputs key create a attribute
             const keys = Object.entries(input);
             for (const [key, value] of keys) {
@@ -75,15 +85,15 @@ const Input = {
                     inputElement.setAttribute('max', date);
                 }
                 if (value === 'password') {
-                    inputElement.setAttribute('pattern', '^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%])[A-Za-z\d@$!%*#?&]{8,}$');
+                    // inputElement.setAttribute('pattern', '^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%])[A-Za-z\d@$!%*#?&]{8,}$');
                 }
-                inputElement.setAttribute(key, input[key].toString().replace(' ', '_'));
+                inputElement.setAttribute(key, input[key].toString().replaceAll(' ', '_'));
             }
 
             // create label for input
             const labelElement = document.createElement('label');
             labelElement.classList = 'form__group-label';
-            labelElement.setAttribute('for', input.name.replace(' ', '_'));
+            labelElement.setAttribute('for', input.name.replaceAll(' ', '_'));
             labelElement.innerHTML = input.name;
 
             inputContainer.appendChild(inputElement);
