@@ -72,7 +72,6 @@ const Check = {
     } else if (!Utils.isPasswordSecure(password)) {
       errorMessage(passwordEl, 'Password must has at least 8 characters that include at least 1 lowercase character, 1 uppercase characters, 1 number, and 1 special character in (!@#$%^&*)');
     } else {
-      // showSuccess(passwordEl);
       valid = true;
     }
 
@@ -81,7 +80,6 @@ const Check = {
 
   checkConfirmPassword() {
     const confirmPasswordEl = document.getElementById('confirm_password');
-    // const passwordEl = document.getElementById('password').value.trim();
     let valid = false;
 
     // check confirm password
@@ -90,7 +88,6 @@ const Check = {
     } else if (!Utils.isPasswordRepeated(confirmPasswordEl.value.trim())) {
       errorMessage(confirmPasswordEl, 'password did not not match');
     } else {
-      // showSuccess(confirmPasswordEl);
       valid = true;
     }
 

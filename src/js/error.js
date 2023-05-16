@@ -14,7 +14,7 @@ function errorMessage(element, text) {
   errorContent.innerHTML = text;
 
   errorContainer.appendChild(errorContent);
-  // add to html
+
   element.parentNode.appendChild(errorContainer);
 }
 

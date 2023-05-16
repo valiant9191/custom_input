@@ -83,11 +83,6 @@ const Input = {
           const date = new Date().toLocaleDateString();
           inputElement.setAttribute('max', date);
         }
-        if (value === 'password') {
-          // inputElement.setAttribute('pattern',
-          //  '^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%])[A-Za-z\d@$!%*#?&]{8,}$'
-          //  );
-        }
         inputElement.setAttribute(key, input[key].toString().replaceAll(' ', '_'));
       }
 

@@ -130,5 +130,4 @@ body {
     border: 1px solid var(--error);
     color: var(--error);
     background-color: var(--white);
-    /* margin: 70px 50px; */
 }

@@ -31,21 +31,9 @@ function validateDebounce(event) {
     target.className = target.className.replaceAll('active', '');
   }
 
-  // didn't get how to implement this feature
-  // let timeoutId;
   check(event);
-  // return () => {
-  //     console.log(event.target.value)
-  //     // cancel the previous
-  //     if (timeoutId) {
-  //         clearTimeout(timeoutId);
-  //     }
-  //     // new timer
-  //     timeoutId = setTimeout(() => {
-  //         check(event)
+  // implement feature to control of input with timeInterval
 
-  //     }, 500);
-  // };
 }
 
 export default validateDebounce;
